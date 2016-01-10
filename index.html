@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>You have done it.</title>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <style>
@@ -12,14 +13,11 @@
       }
       @media (min-width: 700px) {
         body {
-          padding-top: 300px;
+          padding-top: 250px;
           text-align: center;
         }
       }
     </style>
-  </head>
-  <body>
-    <h1>Great Job!</h1>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,6 +25,58 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-40336130-2', 'auto');
       ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <script>
+      var GREAT_JOBS = [
+        'Great job',
+        '잘했어요',
+        'Bon travail',
+        'Buen trabajo',
+        'Buon lavoro',
+        '良好的工作',
+        '良い仕事',
+        'Хорошая работа',
+        'العمل الجيد',
+        'Добра работа',
+        'Dobro djelo',
+        'Dobrá práce',
+        'Godt arbejde',
+        'Goed werk',
+        'Hyvää työtä',
+        'Καλή δουλειά',
+        'अच्छे कार्य',
+      ];
+
+      var AWESOMES = [
+        'Awesome',
+        '멋져요',
+        'Impresionante',
+        'Fantasico',
+        'impressionnant',
+        'ehrfürchtig',
+        'i tmerrshëm',
+        'děsivý',
+        'ontzagwekkend',
+        'mahtava',
+        'döbbenetes',
+        'mengagumkan',
+        '素晴らしい',
+        '真棒'
+      ];
+
+      if (Math.random() < 0.1) {
+        setTimeout(function () {
+          window.location.href = 'http://idontfuckin.care';
+        }, 1000);
+      } else {
+        var candidates = GREAT_JOBS.concat(AWESOMES),
+            idx = Math.min(Math.random() * candidates.length | 0, candidates.length - 1),
+            msg = candidates[idx] + '!';
+
+        document.write('<h1>' + msg + '</h1>');
+      }
     </script>
   </body>
 </html>
